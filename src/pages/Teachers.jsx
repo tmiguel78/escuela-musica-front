@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Teachers = () => {
     const [data, setData] = useState(null);
@@ -45,7 +46,7 @@ const Teachers = () => {
     return(
     <>
         <h1>Profesorado</h1>
-        {isAdmin && <button className="add-button">+</button>}
+        {isAdmin && <Link to="/new-teacher"><button className="add-button">+</button></Link>}
         <div className="general-container">
             {data === null 
             ? <div className="loading basic-card">

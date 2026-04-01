@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Bulletin = () => {
     const [data, setData] = useState(null);
@@ -39,7 +40,7 @@ const Bulletin = () => {
             console.log('Respuesta backend:', errorText);
             throw new Error('Error al borrar');
             }
-            
+
             await fetchData()
         } catch (error) {
             console.log(error)
@@ -50,7 +51,7 @@ const Bulletin = () => {
     return(
     <>
         <h1>Tablón de anuncios</h1>
-        {isAdmin && <button className="add-button">+</button>}
+        {isAdmin && <Link to="/new-bulletin"><button className="add-button">+</button></Link>}
         <div className="bulletin-container">
         {data === null 
         ?
