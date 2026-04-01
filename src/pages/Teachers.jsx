@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 
 const Teachers = () => {
     const [data, setData] = useState(null);
-    const apiUrl = 'https://escuela-musica-back.onrender.com/api/teacher'
+    const apiUrl = import.meta.env.VITE_BACKEND_URL + '/teacher';
+    const isAdmin = !!localStorage.getItem('authToken');
 
     const fetchData = async () => {
         try {
@@ -19,17 +20,38 @@ const Teachers = () => {
 
     useEffect(() => {
         fetchData()
-    },[])
+    },[]);
+
+    const handleDelete = async (id) => {
+        if (!window.confirm('¿Seguro que quieres eliminar este profesor?')) return;
+        const token = localStorage.getItem('authToken');
+
+        try {
+            const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/teacher/${id}`,{
+                method: 'DELETE',
+                headers: {
+                    Authorization : `Bearer ${token}`
+                }
+            })
+            if (!response.ok) {
+                throw new Error('Error al borrar')
+            }
+            await fetchData()
+        } catch (error) {
+            console.log(error)
+        }
+    };
 
     return(
     <>
         <h1>Profesorado</h1>
+        {isAdmin && <button className="add-button">+</button>}
         <div className="general-container">
             {data === null 
-            ? <div>
-                <h2 style={{ textAlign: "center" }}>Cargando...</h2>
+            ? <div className="loading basic-card">
+                <h2>Cargando...</h2>
                 <p>Puede tardar 15-20 segundos hasta que "despierte" el servidor</p>
-                </div>
+              </div>
             : data.map(teacher => (
                 <div className="basic-card" key={teacher._id}>
                     <h3>Nombre:</h3><p>{teacher.name}</p>
@@ -37,6 +59,12 @@ const Teachers = () => {
                     <img src={teacher.image} alt={teacher.name} />
                     <h3>Curriculum:</h3>
                     <p>{teacher.curriculum}</p>
+                    {isAdmin && (
+                    <>  <button>Editar</button>
+                        <button onClick={()=> handleDelete(teacher._id)}>Eliminar</button>
+                    </>
+                    )
+                    }
                </div>
             )) 
             }
