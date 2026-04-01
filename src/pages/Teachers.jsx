@@ -61,7 +61,7 @@ const Teachers = () => {
                     <h3>Curriculum:</h3>
                     <p>{teacher.curriculum}</p>
                     {isAdmin && (
-                    <>  <button>Editar</button>
+                    <>  <Link to={`/teacher/${teacher._id}`}><button>Editar</button></Link>
                         <button onClick={()=> handleDelete(teacher._id)}>Eliminar</button>
                     </>
                     )

@@ -30,7 +30,7 @@ function Login() {
 
   return (
     <>
-      <h1>Login</h1>
+      <h1>Login administrador</h1>
       <div className="login-container">
       <form onSubmit={handleLogin}>
         <input

@@ -8,7 +8,7 @@ const LoginButton = () => {
     ? (<button className="login-button"
         onClick={() => {
             localStorage.removeItem('authToken');
-            window.location.reload()
+            navigate('/');
         }}>Logout</button>)
     : (
         <Link to='/login'>

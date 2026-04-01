@@ -66,7 +66,7 @@ const Bulletin = () => {
                     <p>{bulletin.text}</p>
                     {bulletin.image && <img src={bulletin.image} alt={bulletin.text} />}
                     {isAdmin && (
-                    <>  <button>Editar</button>
+                    <>  <Link to={`/bulletin/${bulletin._id}`}><button>Editar</button></Link>
                         <button onClick={()=> handleDelete(bulletin._id)}>Eliminar</button>
                     </>
                     )

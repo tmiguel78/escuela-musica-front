@@ -58,7 +58,7 @@ const Instruments = () => {
                     <h3>{inst.name}</h3>
                     <img src={inst.image} alt={inst.name} />
                     {isAdmin && (
-                    <>  <button>Editar</button>
+                    <>  <Link to={`/instrument/${inst._id}`}><button>Editar</button></Link>
                         <button onClick={()=> handleDelete(inst._id)}>Eliminar</button>
                     </>
                     )
