@@ -180,6 +180,6 @@ Para probar las funcionalidades de administrador:
 
 ## Autor
 
-José Antonio Miguel Artigas
+José Antonio Miguel
 
 ---
