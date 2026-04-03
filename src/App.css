@@ -252,7 +252,7 @@ p {
     }
 }
 
-@media (max-width : 730px) {
+@media (max-width : 650px) {
     nav {
         display: flex;
         flex-direction: column;
