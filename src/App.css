@@ -249,7 +249,6 @@ p {
         gap: 10px;
         width: 180px;
         margin-left: 20px;
-    
     }
 }
 
@@ -261,7 +260,7 @@ p {
         margin-bottom: 30px;
     }
     body {
-        padding-top: 110px;
+        padding-top: 90px;
     }
     h1 {
         text-align: center;
@@ -276,13 +275,21 @@ p {
         font-size: 50px;
     }
     .login-container form{
-        width: clamp(300px, 60%, 800px);
-        margin: 10px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: clamp(100px, 90%, 250px);
+        margin: 10px auto; 
+        scale: 0.9;       
+    }
+    .login-container input {
+        width: 100%;
+        box-sizing: border-box;
     }
     textarea {
         width: 100%;
         box-sizing: border-box;
-        resize: vertical; /* opcional: permite redimensionar solo verticalmente */
+        resize: vertical;
     }
     .weather-container {
         margin: 0 auto;
@@ -293,9 +300,22 @@ p {
     }
     .contact-container {
         width: clamp(300px, 80%, 800px);
-        margin: 20px auto;
+        margin: 15px auto;
+        gap: 15px;
+    }
+    .contact-container p {
+        max-width: 100%;
+        word-wrap: break-word;
+        font-size: 16px;
+    }
+    .contact-container h2 {
+        font-size: 40px;
     }
     .bulletin-container {
+        width: clamp(300px, 80%, 800px);
+        margin: 15px auto;
+    }
+    .home-container {
         width: clamp(300px, 80%, 800px);
         margin: 15px auto;
     }
