@@ -60,7 +60,10 @@ p {
 
 .title {
     font-family: var(--fuente-titulo);
-    font-size: 100px;
+    font-size: 80px;
+}
+.title-home{
+    font-size: 30px;
 }
 .login-button {
     border: 1px solid red;
@@ -122,8 +125,6 @@ p {
     gap: 50px;
     padding: 10px;
     margin: 0 auto;
-    /* margin-left: 25%;
-    margin-right: 25%; */
     border: 1px solid grey;
     border-radius: 10px;
     background-color: whitesmoke;
@@ -145,9 +146,6 @@ p {
     width: fit-content;
     padding: 10px;
     margin: 0 auto;
-    /* margin-top: 50px;
-    margin-left: 30%;
-    margin-right: 30%; */
     border: 1px solid grey;
     border-radius: 10px;
     background-color: whitesmoke;

@@ -4,7 +4,7 @@ const Home = () => {
     return(
     <>
         <WeatherWidget />
-        <h1 className="title-home"><span className="title">"Corcheas"</span> - Escuela de música</h1>
+        <h1 className="title-home"><span className="title">"Corcheas"</span>🎶 Escuela de música 🪇</h1>
         <div className="home-container">
         <main>
             <h2>· Quiénes somos:</h2>
