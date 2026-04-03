@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 const WeatherWidget = () => {
     const [data, setData] = useState(null);
-    const apiUrl = 'https://api.weatherapi.com/v1/forecast.json?key=f7719a92581b4893bf4110639250312&q=Madrid&days=1&aqi=no&alerts=no';
+    const apiUrl = 'https://escuela-musica-back.onrender.com/api/weather'
     const city = data?.location?.name;
     const temp = data?.current?.temp_c;
     
