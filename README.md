@@ -83,9 +83,10 @@ escuela-musica-front/
 │   │   ├── FormNewTeacher.jsx
 │   │   ├── LoginButton.jsx
 │   │   ├── Navbar.jsx
-│   │   └── ProtectedRoute.jsx
+│   │   ├── ProtectedRoute.jsx
+│   │   └── WeatherWidget.jsx
 │   │
-│   ├── config/                # Configuración externa de la app
+│   ├── config/                # Configuración firebase
 │   │   └── firebase.js
 │   │
 │   ├── pages/                 # Páginas principales de la aplicación
@@ -175,12 +176,12 @@ Para probar las funcionalidades de administrador:
 ## ⚠️ Notas
 
 - El backend puede tardar unos 20 segundos en responder si está inactivo.
-- Se recomienda esperar unos segundos si aparece “Cargando...”
+- Se recomienda esperar si aparece “Cargando...”
 
 ---
 
 ## Autor
 
-José Antonio Miguel
+Toño Miguel
 
 ---

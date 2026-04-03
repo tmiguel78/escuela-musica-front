@@ -231,6 +231,7 @@ p {
     opacity: 0.9;
 }
 .weather-container p {
+    text-align: center;
     font-size: 16px;
     font-style: italic;
 }

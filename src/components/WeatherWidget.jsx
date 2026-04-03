@@ -32,7 +32,7 @@ const WeatherWidget = () => {
                 <h3>{city},</h3>
                 <img src="/temp.svg"/>
                 <h3>{temp} ºC</h3>
-                <p>- Hoy es un buen día para empezar a tocar un instrumento</p>
+                <p>· Hoy es un buen día para empezar a tocar un instrumento ·</p>
             </>
         }
         </div>
