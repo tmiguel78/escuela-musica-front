@@ -54,7 +54,6 @@ const FormNewBulletin = () => {
             <h1>Formulario Nuevo Anuncio</h1>
             <form onSubmit={handleSubmit}>
                 <textarea
-                    cols='30'
                     rows='5'
                     placeholder="Texto del anuncio"
                     value={text}

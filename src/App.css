@@ -24,6 +24,7 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
+    box-sizing: border-box;
     border-bottom: 1px solid gray;
     background-color: whitesmoke;
     z-index: 9;
@@ -117,15 +118,23 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: fit-content;
     gap: 50px;
     padding: 10px;
-    margin-left: 25%;
-    margin-right: 25%;
+    margin: 0 auto;
+    /* margin-left: 25%;
+    margin-right: 25%; */
     border: 1px solid grey;
     border-radius: 10px;
     background-color: whitesmoke;
     box-shadow: 6px 6px 8px 0px #000000;
     opacity: 0.9;
+}
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
 }
 .login-container form {
     display: flex;
@@ -133,10 +142,12 @@ p {
     flex-wrap: wrap;
     align-items: center;
     gap: 10px;
+    width: fit-content;
     padding: 10px;
-    margin-top: 50px;
+    margin: 0 auto;
+    /* margin-top: 50px;
     margin-left: 30%;
-    margin-right: 30%;
+    margin-right: 30%; */
     border: 1px solid grey;
     border-radius: 10px;
     background-color: whitesmoke;
@@ -204,4 +215,88 @@ p {
     font-family: var(--fuente-titulo);
     font-size: 40px;
     margin-right: 10px;
+}
+.weather-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    position: fixed;
+    left: 20px;
+    top: 110px;
+    width: 180px;
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    box-shadow: 6px 6px 8px 0px #000000;
+    background-color: whitesmoke;
+    opacity: 0.9;
+}
+.weather-container p {
+    font-size: 16px;
+    font-style: italic;
+}
+.weather-container h3 {
+    font-size: 20px;
+}
+
+@media (max-width: 1300px) {
+    .weather-container {
+        display: flex;
+        justify-content: center;
+        position: inherit;
+        flex-wrap: wrap;
+        gap: 10px;
+        width: 180px;
+        margin-left: 20px;
+    
+    }
+}
+
+@media (max-width : 730px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+    body {
+        padding-top: 110px;
+    }
+    h1 {
+        text-align: center;
+        font-size: 30px;
+        width: clamp(300px, 60%, 800px);
+        margin: 10px auto;
+    }
+    .title-home {
+        margin: 12px auto;
+    }
+    .title {
+        font-size: 50px;
+    }
+    .login-container form{
+        width: clamp(300px, 60%, 800px);
+        margin: 10px auto;
+    }
+    textarea {
+        width: 100%;
+        box-sizing: border-box;
+        resize: vertical; /* opcional: permite redimensionar solo verticalmente */
+    }
+    .weather-container {
+        margin: 0 auto;
+        scale: 0.9;
+    }
+    .login-button {
+        top: 30px;
+    }
+    .contact-container {
+        width: clamp(300px, 80%, 800px);
+        margin: 20px auto;
+    }
+    .bulletin-container {
+        width: clamp(300px, 80%, 800px);
+        margin: 15px auto;
+    }
 }

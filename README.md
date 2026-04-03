@@ -168,6 +168,7 @@ Para probar las funcionalidades de administrador:
 - Renderizado dinámico de datos
 - Protección de rutas privadas
 - Login persistente con token
+- Diseño responsive adaptado a móviles y tablets.
 
 ---
 
