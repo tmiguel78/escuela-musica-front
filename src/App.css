@@ -143,7 +143,7 @@ p {
     flex-wrap: wrap;
     align-items: center;
     gap: 10px;
-    width: fit-content;
+    width: clamp(100px, 70%, 350px);
     padding: 10px;
     margin: 0 auto;
     border: 1px solid grey;
@@ -153,6 +153,10 @@ p {
     opacity: 0.9;
     transform: scale(1.2);
 }
+.login-container input {
+        width: 80%;
+        box-sizing: border-box;
+    }
 .login-container img {
     width: 80%;
     height: auto;
